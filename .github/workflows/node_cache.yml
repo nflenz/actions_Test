@@ -1,5 +1,5 @@
 name: Upload Node.js 10 and 12 tool cache
-on: push
+on: workflow_dispatch
 jobs:
   upload_tool_cache:
     runs-on: self-hosted
