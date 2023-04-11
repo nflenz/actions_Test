@@ -8,6 +8,9 @@ jobs:
         run: |
           mv "${{ runner.tool_cache }}" "${{ runner.tool_cache }}.old"
           mkdir -p "${{ runner.tool_cache }}"
+      - uses: nuget/setup-nuget@v1
+        with:
+          nuget-version: '5.x'
       - name: Setup Node 10
         uses: actions/setup-node@v2
         with:
