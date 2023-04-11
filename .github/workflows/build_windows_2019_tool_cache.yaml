@@ -1,7 +1,8 @@
-name: Build Windows 2019 Tools Cache
+name: Build UBI8  Tools Cache
 on: workflow_dispatch
+jobs:
   build_tool_cache:
-    runs-on: WIN2019
+    runs-on: ubi8
     steps:    
       - name: Clear any existing tool cache
         run: |
