@@ -8,27 +8,39 @@ jobs:
         run: |
           mv "${{ runner.tool_cache }}" "${{ runner.tool_cache }}.old"
           mkdir -p "${{ runner.tool_cache }}"
+
       - uses: nuget/setup-nuget@v1
         with:
-          nuget-version: '5.x'
+          nuget-version: '5.11.x'
+
+      - name: Add msbuild
+        uses: microsoft/setup-msbuild@v1.1
+        with:
+          vs-version: '[15.x,17.x]'
+
       - name: Setup Node 10
         uses: actions/setup-node@v2
         with:
           node-version: 10.x
+
       - name: Setup Node 12
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
+
       - name: Setup Java 17
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'            # need to select our distribution
+          distribution: 'temurin'    
           java-version: '17'
+
       - name: Archive tool cache
         run: |
           cd "${{ runner.tool_cache }}"
           tar -czf tool_cache.tar.gz *
+
       - name: Upload tool cache artifact
         uses: actions/upload-artifact@v2
         with:
-          path: ${{runner.tool_cache}}/tool_cache.tar.gz
+          path: ${{runner.tool_cache}}/windows_2019_tool_cache.tar.gz
+
