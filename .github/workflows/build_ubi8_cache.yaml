@@ -2,7 +2,7 @@ name: Build UBI8  Tools Cache
 on: workflow_dispatch
 jobs:
   build_tool_cache:
-    runs-on: ubi8-runner
+    runs-on: ubi8
     steps:    
       - name: Clear any existing tool cache
         run: |
