@@ -13,12 +13,6 @@ jobs:
         with:
           nuget-version: '5.11.x'
 
-      - name: Add msbuild
-        uses: microsoft/setup-msbuild@v1.1
-        with:
-          vs-version: '[15.9]'
-          vswhere-path: 'C:\apps\'
-
       - name: Setup Node 10
         uses: actions/setup-node@v2
         with:
