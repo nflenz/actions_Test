@@ -6,9 +6,8 @@ jobs:
     steps:    
       - name: Clear any existing tool cache
         run: |
-          mv "${{ runner.tool_cache }}" "${{ runner.tool_cache }}.old"
-          mkdir -p "${{ runner.tool_cache }}"
-
+          rm "${{ runner.tool_cache }}" -r -force
+        
       - uses: nuget/setup-nuget@v1
         with:
           nuget-version: '5.11.x'
