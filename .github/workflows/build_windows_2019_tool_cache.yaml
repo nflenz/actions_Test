@@ -2,7 +2,7 @@ name: Build Windows 2019  Tools Cache
 on: workflow_dispatch
 jobs:
   build_tool_cache:
-    runs-on: WIN2019
+    runs-on: self-hosted
     steps:    
       - name: Clear any existing tool cache
         run: |
