@@ -1,4 +1,4 @@
-name: Build Windows 2019  Tools Cache
+name: Build Windows Node Tools Cache
 on: workflow_dispatch
 jobs:
   build_tool_cache:
