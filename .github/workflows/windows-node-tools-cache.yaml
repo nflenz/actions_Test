@@ -1,0 +1,24 @@
+name: Build Windows 2019  Tools Cache
+on: workflow_dispatch
+jobs:
+  build_tool_cache:
+    runs-on: WIN2019
+    steps:    
+      - name: Clear any existing tool cache
+        run: |
+          rm "${{ runner.tool_cache }}" -r -force
+
+      - name: Setup Node 18
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.x
+
+      - name: Setup Node 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      - name: Setup Node 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
