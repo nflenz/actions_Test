@@ -1,4 +1,4 @@
-name: Build Windows Node Tools Cache
+name: Build Linux Node Tools Cache
 on: workflow_dispatch
 jobs:
   build_tool_cache:
