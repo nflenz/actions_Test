@@ -2,11 +2,11 @@ name: Build Windows 2019  Tools Cache
 on: workflow_dispatch
 jobs:
   build_tool_cache:
-    runs-on: self-hosted
+    runs-on: linux
     steps:    
       - name: Clear any existing tool cache
         run: |
-          rm "${{ runner.tool_cache }}" -r -force
+          rm "${{ runner.tool_cache }}" -rf
 
       - name: Setup Java 21
         uses: actions/setup-java@v3
