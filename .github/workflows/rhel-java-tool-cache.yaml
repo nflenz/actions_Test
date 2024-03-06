@@ -2,13 +2,13 @@ name: RHEL 7.9 Tool Cache
 on: workflow_dispatch
 jobs:
   build_tool_cache:
-    runs-on: rhel-79-home
+    runs-on: linux
     steps:    
       - name: Clear any existing tool cache
         run: |
           rm -rf "${{ runner.tool_cache }}" 
-      - name: Setup Java 21
+      - name: Setup Java 17
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'            # need to select our distribution
-          java-version: '21'
+          distribution: 'oracle'            # need to select our distribution
+          java-version: '17'
