@@ -11,4 +11,4 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'oracle'            # need to select our distribution
-          java-version: '17'
+          java-version: '17.x'
