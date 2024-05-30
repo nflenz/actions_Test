@@ -7,28 +7,8 @@ jobs:
       - name: Clear any existing tool cache
         run: |
           rm -rf "${{ runner.tool_cache }}"
-
-      - name: Setup Node 18
+          
+      - name: Setup Node 20
         uses: actions/setup-node@v2
         with:
-          node-version: 18.x
-
-      - name: Setup Node 16
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-
-      - name: Setup Node 14
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
-
-      - name: Setup Node 12
-        uses: actions/setup-node@v2
-        with:
-          node-version: 12.x
-
-      - name: Setup Node 10
-        uses: actions/setup-node@v2
-        with:
-          node-version: 10.x
+          node-version: 20.x
