@@ -10,5 +10,6 @@ jobs:
         uses: actions/setup-dotnet@v4
         env:
           ACTIONS_STEP_DEBUG: true
+          NODE_TLS_REJECT_UNAUTHORIZED: '0'
         with:
           dotnet-version: 8.x
