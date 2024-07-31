@@ -1,0 +1,12 @@
+---
+name: Download dotnet for Linux
+on: workflow_dispatch
+jobs:
+  build_tool_cache:
+    runs-on: Linux
+    steps:    
+          
+      - name: Setup dotnet 8
+        uses: actions/setup-dotnet@v4
+        with:
+          node-version: 8.x
